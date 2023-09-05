@@ -207,6 +207,26 @@ const products = [
         deposit: 15,
         genre:"adventure",
         summary:"From the moment Horace F. Andrews sees the sign from the bus—a sign with his own name on it—everything changes. The sighting leads him underground, to the House of Answers, a hidden warehouse full of mysterious objects. But there he finds only questions. What is this curious place? Who are the strange, secretive people who entrust him with a rare and immensely powerful gift? And what is he to do with it?"
+    },
+    {
+        id:22,
+        image:"../images/product/the-harp-and-the-ravenvine.jpg",
+        title:"The Harp and the Ravenvine",
+        author:"Ted Sanders",
+        rental: 5,
+        deposit: 15,
+        genre:"adventure",
+        summary:"Ted Sanders’s acclaimed Keepers series returns with The Harp and the Ravenvine, the eagerly awaited sequel to The Box and the Dragonfly, hailed as a “winding fantasy adventure” by the New York Times Book Review. This classic tween fantasy has a science fiction twist and will thrill readers with intrigue, magic, and the unexpected at every turn."
+    },
+    {
+        id:23,
+        image:"../images/product/the-thirteen-ghosts.jpg",
+        title:"The Thirteen Ghosts",
+        author:"Geronimo Stilton",
+        rental: 5,
+        deposit: 10,
+        genre:"adventure",
+        summary:"Creepella von Cacklefur and her niece, Shivereen, visit scary Squeakspeare Mansion. There they meet Bobby Squeakspeare, a descendent of the famouse writer, William Squeakspeare. Will the spooky rooms and ghosts they find inside the mansion be friendly–or frightening?"
     }
     
 ];
