@@ -6,7 +6,6 @@
 }
 body {
     scroll-behavior: smooth;
-    background: whitesmoke;
     display: flex;
     height: 100vh;
     justify-content: center;
@@ -23,7 +22,7 @@ body {
 .container{
     margin:auto;
     display: grid;
-    grid-template-columns: repeat(3,auto);
+    grid-template-columns: repeat(4,auto);
 }
 .bookCard{
     height: 350px;
@@ -40,6 +39,7 @@ body {
     background: rgb(27,27,27,.9);
     color:white;
     transition: all ease 0.25s;
+    position: relative;
 }
 h3{
     margin:10px;
@@ -73,10 +73,20 @@ p{
     transform: scale(1.1);
 }
 .btnContainer{
+    opacity: 0;
+    transition: ease 0.25s;
+}
+.bookCard:hover .btnContainer{
     height: 30px;
+    padding-top: 1.5rem;
+    position: absolute;
+    bottom: 30px;
     display: flex;
     justify-content: space-between;
-    padding-top: 1.5rem;
+    width: 100%;
+    left: 0;
+    right: 0;
+    opacity: 1;
 }
 .btn{
     width: 24px;
