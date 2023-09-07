@@ -1,0 +1,107 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+}
+body {
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.bookCover{
+    height: 350px;
+    width: 245px;
+    border-radius: 10px;
+    transition: all ease 0.25s;
+}
+.filterContainer{
+    padding: 1.2rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.bookContainer{
+
+    margin:auto;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+}
+.bookCard{
+    height: 350px;
+    margin: 40px;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+}
+.details{
+    height: 70px;
+    bottom: 70px;
+    width: 245px;
+    padding: 6px;
+    position: relative;
+    background: rgb(27,27,27,.75);
+    color:white;
+    transition: all ease 0.25s;
+    position: relative;
+}
+h3{
+    margin:10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+p{
+    font-size: 14px;
+    margin: 8px;
+    visibility: hidden;
+    opacity: 0;
+}
+.summary{
+    max-height: 30%;
+}
+
+.summary p{
+    font-size: 12px;
+    line-height: 1;
+}
+.bookCard:hover .details{
+    height: 350px;
+    bottom: 350px;
+    background: black;
+}
+.bookCard:hover p{
+    opacity: 1;
+    visibility: visible;
+}
+.bookCard:hover .bookCover{
+    transform: scale(1.1);
+}
+.btnContainer{
+    opacity: 0;
+    transition: ease 0.25s;
+}
+.bookCard:hover .btnContainer{
+    height: 30px;
+    padding-top: 1.5rem;
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+.btn{
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+.btn:hover{
+    transform: translateY(-5px);
+    opacity: 0.8;
+}
