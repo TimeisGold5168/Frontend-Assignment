@@ -7,7 +7,7 @@
 body {
     scroll-behavior: smooth;
     display: flex;
-    height: 100vh;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     
@@ -18,8 +18,15 @@ body {
     border-radius: 10px;
     transition: all ease 0.25s;
 }
+.filterContainer{
+    padding: 1.2rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
 
-.container{
+.bookContainer{
+
     margin:auto;
     display: grid;
     grid-template-columns: repeat(4,auto);

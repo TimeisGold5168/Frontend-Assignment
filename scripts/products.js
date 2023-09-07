@@ -66,6 +66,7 @@ const products = [
         author:"J. K. Rowling,Jim Field",
         rental: 5,
         deposit: 60,
+        genre:"fiction",
         summary:"One boy and his toy are about to change everything…Jack loves his childhood toy, Dur Pig. DP has always been there for him, through good and bad. Until one Christmas Eve, something terrible happens – DP is lost. But Christmas Eve is a night for miracles and lost causes, a night when all things can come to life… even toys. "
     },
     {
