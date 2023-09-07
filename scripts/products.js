@@ -228,6 +228,176 @@ const products = [
         deposit: 10,
         genre:"adventure",
         summary:"Creepella von Cacklefur and her niece, Shivereen, visit scary Squeakspeare Mansion. There they meet Bobby Squeakspeare, a descendent of the famouse writer, William Squeakspeare. Will the spooky rooms and ghosts they find inside the mansion be friendly–or frightening?"
+    },
+    {
+        id:24,
+        image:"../images/product/how-to-fight-a-dragons-fury.jpg",
+        title:"How to Fight a Dragon’s Fury",
+        author:"Cressida Cowell",
+        rental: 5,
+        deposit: 15,
+        genre:"adventure",
+        summary:"The Doomsday of Yule has arrived, and the future of dragonkind lies in the hands of one boy with nothing to show but everything to fight for. Hiccup’s quest is clear…but can he end the rebellion? Can he prove himself to be king? Can he save the dragons? The stakes have never been higher, as the very fate of the Viking world hangs in the balance!"
+    },
+    {
+        id:25,
+        image:"../images/product/Stardust.jpg",
+        title:"Stardust",
+        author:"Neil Gaiman",
+        rental: 5,
+        deposit: 20,
+        genre:"adventure",
+        summary:"Stardust is an utterly charming fairy tale in the tradition of The Princess Bride and The Neverending Story. Neil Gaiman, creator of the darkly elegant Sandman comics and author of The Day I Swapped My Dad for Two Goldfish, tells the story of young Tristran Thorn and his adventures in the land of Faerie. "
+    },
+    {
+        id:26,
+        image:"../images/product/the-quest-for-paradise.jpg",
+        title:"The Quest for Paradise",
+        author:"Geronimo Stilton",
+        rental: 5,
+        deposit: 15,
+        genre:"adventure",
+        summary:"Holey cheese Join Geronimo as he returns to the Kingdom of Fantasy in this sequel to the very first Geronimo stilton hardcover adventure.In this 320-page, full-color hardcover adventure, the Queen of the Fairies invites Geronimo back to her fantastical world to help in the quest for the true heart of happiness. "
+    },
+    {
+        id:27,
+        image:"../images/product/kensukes-kingdom.jpg",
+        title:"Kensuke’s Kingdom",
+        author:"Michael Morpurgo",
+        rental: 5,
+        deposit: 15,
+        genre:"adventure",
+        summary:"When Michael’s father loses his job, he buys a boat and convinces Michael and his mother to sail around the world. It’s an ideal trip – even Michael’s sheepdog can come along. It starts out as the perfect family adventure – until Michael is swept overboard. He’s washed up on an island, where he struggles to survive. Then he discovers that he’s not alone. His fellow-castaway, Kensuke, is wary of him. But when Michael’s life is threatened, Kensuke slowly lets the boy into his world."
+    },
+    {
+        id:28,
+        image:"../images/product/escape-from-mr-lemoncellos-library.jpg",
+        title:"Escape from Mr. Lemoncello’s Library",
+        author:"Chris Grabenstein",
+        rental: 5,
+        deposit: 15,
+        genre:"adventure",
+        summary:"When Kyle learns that the world’s most famous game maker, Luigi Lemoncello, has designed the town’s new library and is having an invitation-only lock-in on opening night, he’s determined to be there! But the tricky part isn’t getting into the library—it’s getting out. Kyle’s going to need all his smarts, because a good roll of the dice or lucky draw of the cards is not enough to win in Mr. Lemoncello’s library"
+    },
+    {
+        id:29,
+        image:"../images/product/thea-stilton-and-the-secret-city.jpg",
+        title:"Thea Stilton and the Secret City",
+        author:"Thea Stilton",
+        rental: 5,
+        deposit: 10,
+        genre:"adventure",
+        summary:"In this amazing adventure, Thea’s friends the Thea Sisters head to Peru, where a good friend of Paulina’s is in danger. There, the five mice climb the Andes mountains in search of a mysterious treasure that’s hidden in the Secret City of the Incas. Readers will love following the clues to help the Thea Sisters solve the mystery!"
+    },
+    {
+        id:30,
+        image:"../images/product/lost-treasure-of-the-emerald-eye.jpg",
+        title:"Lost Treasure of the Emerald Eye",
+        author:"Geronimo Stilton",
+        rental: 5,
+        deposit: 10,
+        genre:"adventure",
+        summary:"Who Is Geronimo Stilton?That’s me! I run a newspaper, but my true passion is writing tales of adventure. Here on Mouse Island, my books are all best-sellers! What’s that? You’ve never read one? Well, my books are full of fun. They are whisker-licking good stories, and that’s a promise!Lost Treasure of the Emerald EyeIt all started when my sister, Thea, discovered a mysterious map. It showed a secret treasure on a faraway island. "
+    },
+    {
+        id:31,
+        image:"../images/product/the-cheese-experiment.jpg",
+        title:"The Cheese Experiment",
+        author:"Geronimo Stilton",
+        rental: 5,
+        deposit: 10,
+        genre:"adventure",
+        summary:"New Mouse City was in a panic. A strange epidemic had broken out — mice everywhere were covered in weird blue spots! Mouse Island’s most famouse doctor immediately set to work with his team to try to find the cure… but someone was trying to stop him. Could I figure out who before I ended up blue myself?"
+    },
+    {
+        id:32,
+        image:"../images/product/christmas-catastrophe.jpg",
+        title:"Christmas Catastrophe",
+        author:"Geronimo Stilton",
+        rental: 5,
+        deposit: 10,
+        genre:"adventure",
+        summary:"Geronimo Stilton, adventuremouse? Not me! But surely a little skiing couldn’t hurt a rodent, right? Wrong. Moldy mozzarella! When my ski trip landed me in the hospital, I was sure it was going to be the worst Christmas ever! But my family and friends had something else in mind. . ."
+    },
+    {
+        id:33,
+        image:"../images/product/wedding-crasher.jpg",
+        title:"Wedding Crasher",
+        author:"Geronimo Stilton",
+        rental: 5,
+        deposit: 10,
+        genre:"adventure",
+        summary:"Oh, how I hate traveling! So when I got an invitation to visit a long-lost relative who lives far, far away, I wasn’t squeaking with joy. But Thea, Trap, and Benjamin thought it sounded fabumouse. They dragged me along to the crazy castle on Penny-Pincher Peak. Rat-munching rattlesnakes! I never should have agreed to go with them. . ."
+    },
+    {
+        id:34,
+        image:"../images/product/the-search-for-sunken-treasure.jpg",
+        title:"The Search for Sunken Treasure",
+        author:"Geronimo Stilton",
+        rental: 5,
+        deposit: 10,
+        genre:"adventure",
+        summary:"Holey cheese, what an adventure! I was off to the Ratlápagos Islands with my family in search of a long-lost buried treasure. But oh, how I hate traveling! Being on a ship in the middle of the sea wasn’t my idea of a fabumouse time. And I was beginning to suspect that we weren’t the only ones searching for the treasure. . ."
+    },
+    {
+        id:35,
+        image:"../images/product/the-curse-of-the-cheese-pyramid.jpg",
+        title:"The Curse Of The Cheese Pyramid",
+        author:"Geronimo Stilton",
+        rental: 5,
+        deposit: 10,
+        genre:"adventure",
+        summary:"Who is Geronimo Stilton? Why, that’s me! I run a newspaper, but my true passion is writing tales of adventure. Here on Mouse Island, my books are all bestsellers! What’s that? You’ve never read one? Well, my books are full of fun. They are whisker-licking-good stories, and that’s a promise! It was a dream come true… I, Geronimo Stilton, was going to EGYPT! I climbed onboard a CRABBY old camel that would take me across the desert to the Great CHEESE Pyramid."
+    },
+    {
+        id:36,
+        image:"../images/product/life-of-pi-1.jpg",
+        title:"Life of Pi",
+        author:"Yann Martel",
+        rental: 5,
+        deposit: 20,
+        genre:"adventure",
+        summary:"The son of a zookeeper, Pi Patel has an encyclopedic knowledge of animal behavior and a fervent love of stories. When Pi is sixteen, his family emigrates from India to North America aboard a Japanese cargo ship, along with their zoo animals bound for new homes."
+    },
+    {
+        id:37,
+        image:"../images/product/gangsta-granny.jpg",
+        title:"Gangsta Granny",
+        author:"Yann Martel",
+        rental: 5,
+        deposit: 15,
+        genre:"adventure",
+        summary:"Another hilarious and moving novel from David Walliams, number one bestseller and fastest growing children’s author in the country. A story of prejudice and acceptance, funny lists and silly words, this new book has all the hallmarks of David’s previous bestsellers."
+    },
+    {
+        id:38,
+        image:"../images/product/the-worlds-worst-children.jpg",
+        title:"The World’s Worst Children",
+        author:"David Walliams, Tony Ross (Illustrations)",
+        rental: 5,
+        deposit: 15,
+        genre:"adventure",
+        summary:"From the world’s favourite author, David Walliams – ten cautionary tales and a delightfully dreadful cast of characters; all in a gorgeously gifty FULL COLOUR format! Are you ready to meet the World’s Worst Children? Five beastly boys and five gruesome girls!"
+    },
+    {
+        id:39,
+        image:"../images/product/slime.jpg",
+        title:"Slime",
+        author:"David Walliams, Tony Ross (Illustrations)",
+        rental: 5,
+        deposit: 15,
+        genre:"adventure",
+        summary:"The new children’s book from No. 1 bestselling author David Walliams – a fantastically funny tale illustrated by artistic genius, Tony Ross. WELCOME TO THE ISLE OF MULCH…This little island is home to a large number of horrible grown-ups. The school, the local park, the toy shop and even the island’s ice-cream van are all run by awful adults who like nothing more than making children miserable. "
+    },
+    {
+        id:40,
+        image:"../images/product/grandpas-great-escape.jpg",
+        title:"Grandpa’s Great Escape",
+        author:"David Walliams, Tony Ross (Illustrations)",
+        rental: 5,
+        deposit: 15,
+        genre:"adventure",
+        summary:"Grandpa lives in a Maximum Security Twighlight Zone, and his Grandson attempts to set him free. Jack’s Grandpa… wears his slippers to the supermarket serves up tinned tongue for dinner and often doesn’t remember Jack’s name But he can still take to the skies in a speeding Spitfire and save the day…" 
     }
     
 ];

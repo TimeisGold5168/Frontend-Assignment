@@ -43,7 +43,7 @@ body {
     width: 245px;
     padding: 6px;
     position: relative;
-    background: rgb(27,27,27,.9);
+    background: rgb(27,27,27,.75);
     color:white;
     transition: all ease 0.25s;
     position: relative;
