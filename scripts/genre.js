@@ -49,15 +49,31 @@ $(function(){
     });
 
     // Event listener for the love button
-    $(".bookContainer").on("click", ".love-btn", () =>{
+    $(".bookContainer").on("click", ".love-btn", function () {
         const bookId = $(this).data("id");
-        console.log(`Book with ID ${bookId} is loved.`);
+        const bookExists = currentUser.wishlist.some((id) => id === bookId);
+
+        if(bookExists) {
+            alert("This book is already in your wishlist!");
+        } else {
+            alert(`Successfully added to your wishlist!`);
+            currentUser.wishlist.push(bookId);
+            localStorage.setItem(currentUser.username, JSON.stringify(currentUser));
+        }
     });
     
     // Event listener for the cart button
-    $(".bookContainer").on("click", ".cart-btn",() =>{
+    $(".bookContainer").on("click", ".cart-btn",function () {
         const bookId = $(this).data("id");
-        console.log(`Book with ID ${bookId} is added to the cart.`);
+        const bookExists = currentUser.cart.some((id) => id === bookId);
+
+        if(bookExists) {
+            alert("This book is already in your cart!");
+        } else {
+            alert(`Successfully added to your cart!`);
+            currentUser.cart.push(bookId);
+            localStorage.setItem(currentUser.username, JSON.stringify(currentUser));
+        }
     });
   
 })
