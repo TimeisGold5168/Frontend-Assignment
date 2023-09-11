@@ -1,0 +1,11 @@
+*{
+    font-family: Inter;
+}
+
+.description p{
+    color:  #15133C;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-size: 30px;
+    font-weight:bold;
+}
