@@ -12,9 +12,6 @@ const getCookie = (name) =>{
 const username = getCookie("currentUser");
 const currentUser = JSON.parse(localStorage.getItem(username));
 
-let wishlist = currentUser.wishlist;
-let cart = currentUser.cart;
-
 if(currentUser==null) {
     alert("please log in to continue");
 }
