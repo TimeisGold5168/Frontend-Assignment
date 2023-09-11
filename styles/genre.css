@@ -10,7 +10,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    background-color: #15133C;
 }
 .bookCover{
     height: 350px;
@@ -24,12 +24,33 @@ body {
     display: flex;
     justify-content: space-around;
 }
+.filterContainer h1{
+    color: #EC994B;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 70px;
+}
+.filter{
+    margin-top: 20px;
+    padding-left: 0.5rem;
+    padding-right: 3rem;
+    background: transparent;
+    border:1px solid #EC994B;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #EC994B;
+    font-weight: 700;
+    font-size: 20px;
+}
 
 .bookContainer{
-
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 22px;
     margin:auto;
     display: grid;
     grid-template-columns: repeat(4,auto);
+    background-color: whitesmoke;
 }
 .bookCard{
     height: 350px;
@@ -105,3 +126,40 @@ p{
     transform: translateY(-5px);
     opacity: 0.8;
 }
+
+@media (max-width: 1280px) {
+    .bookContainer{
+        grid-template-columns: repeat(3,auto);
+    }
+}
+
+@media (max-width: 900px) {
+    .bookContainer{
+        grid-template-columns: repeat(2,auto);
+    }
+    .filterContainer h1{
+        font-size: 56px;
+    }
+    .filter{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .bookContainer{
+        grid-template-columns: repeat(1,auto);
+    }
+
+    .filterContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .filterContainer h1{
+        font-size: 36px;
+    }
+    .filter{
+        margin-top: 1rem;
+        width: 50%;
+    }
+}
+
