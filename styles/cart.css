@@ -2,10 +2,16 @@
     font-family: Inter;
 }
 
-.description p{
+.description div p{
     color:  #15133C;
     margin-bottom: 0px;
     padding-bottom: 0px;
+    font-size: 1vw; 
     font-weight:bold;
-    font-size: 2.1vw;
+}
+
+.description input{
+    height: 1.5vw;
+    padding:0px;
+    padding-left: 10px;
 }
