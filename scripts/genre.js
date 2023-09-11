@@ -14,8 +14,8 @@ $(function(){
                             <p>${book.summary}</p>
                         </div>
                         <div class="btnContainer">
-                            <img src="../images/icon/cart_icon.png" alt="card" class="btn cart-btn">
-                            <img src="../images/icon/love_icon.png" alt="love" class="btn love-btn">
+                            <img src="../images/icon/cart_icon.png" class="btn cart-btn" data-id="${book.id}" >
+                            <img src="../images/icon/love_icon.png" class="btn love-btn" data-id="${book.id}" >
                         </div>
                     </div>
                 </div>
@@ -47,4 +47,17 @@ $(function(){
             }
         })
     });
+
+    // Event listener for the love button
+    $(".bookContainer").on("click", ".love-btn", () =>{
+        const bookId = $(this).data("id");
+        console.log(`Book with ID ${bookId} is loved.`);
+    });
+    
+    // Event listener for the cart button
+    $(".bookContainer").on("click", ".cart-btn",() =>{
+        const bookId = $(this).data("id");
+        console.log(`Book with ID ${bookId} is added to the cart.`);
+    });
+  
 })
