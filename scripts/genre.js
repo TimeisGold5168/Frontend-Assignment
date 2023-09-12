@@ -1,5 +1,4 @@
 
-
 $(function(){
     //display book function
     const displayBook = book=>{
@@ -14,8 +13,8 @@ $(function(){
                             <p>${book.summary}</p>
                         </div>
                         <div class="btnContainer">
-                            <img src="../images/icon/cart_icon.png" class="btn cart-btn" data-id="${book.id}" >
-                            <img src="../images/icon/love_icon.png" class="btn love-btn" data-id="${book.id}" >
+                            <img src="../images/icon/cart_icon.png" class="btn cart-btn">
+                            <img src="../images/icon/love_icon.png" class="btn love-btn">
                         </div>
                     </div>
                 </div>
@@ -23,6 +22,37 @@ $(function(){
         $(".bookContainer").append(html);
     };
 
+    const displayGenre = genre=> {
+        if(genre == "all") {
+            products.forEach(product =>{
+                displayBook(product);
+            });
+        } else if (genre == "adventure" || genre== "fiction") {
+            products.forEach(product =>{
+                if(product.genre == genre){
+                    displayBook(product);
+                }
+            })
+        } else {
+            $.get(`https://openlibrary.org/subjects/${genre}.json`,data=>{
+                data.works.forEach(book => {
+                    const bookInfo = {
+                        title:book.title,
+                        author:book.authors ? book.authors[0].name : 'Unknown Author',
+                        id: Math.floor(Math.random()*10000)+1,
+                        rental: Math.floor(Math.random()*30)+1,
+                        deposit: Math.floor(Math.random()*50)+10,
+                        genre:genre,
+                        image:`https://covers.openlibrary.org/b/id/${book.cover_id}-L.jpg`,
+                        summary:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero in sit ut. Dolorem doloremque aperiam nostrum alias voluptatibus culpa maiores nulla omnis, mollitia corporis laboriosam asperiores beatae maxime commodi? Minus."
+                    }
+                    displayBook(bookInfo);
+                });
+            })
+        }
+
+       
+    };
 
     products.forEach(product =>{
         displayBook(product);
@@ -34,46 +64,67 @@ $(function(){
         $(".bookContainer").html("");
 
         const selectedGenre = $(this).find(":selected").val();
-        
-        if(selectedGenre == "all") {
-            products.forEach(product =>{
-                displayBook(product);
-            });
-        }
-
-        products.forEach(product =>{
-            if(product.genre == selectedGenre){
-                displayBook(product);
-            }
-        })
+        displayGenre(selectedGenre);
+       
     });
 
-    // Event listener for the love button
-    $(".bookContainer").on("click", ".love-btn", function () {
-        const bookId = $(this).data("id");
-        const bookExists = currentUser.wishlist.some((id) => id === bookId);
+    
+     // Event listener for the love button
+     $(".love-btn").click(() => {
+        const bookExists = currentUser.wishlist.some((lovedBook) => lovedBook.title === book.title);
 
         if(bookExists) {
             alert("This book is already in your wishlist!");
         } else {
-            alert(`Successfully added to your wishlist!`);
-            currentUser.wishlist.push(bookId);
+            alert(`${book.title} successfully added to your wishlist!`);
+            currentUser.wishlist.push(book);
             localStorage.setItem(currentUser.username, JSON.stringify(currentUser));
         }
     });
-    
-    // Event listener for the cart button
-    $(".bookContainer").on("click", ".cart-btn",function () {
-        const bookId = $(this).data("id");
-        const bookExists = currentUser.cart.some((id) => id === bookId);
+
+    // Event listener for the love button
+    $(".bookContainer").on("click", ".love-btn", function () {
+        const bookCard = $(this).closest(".bookCard"); // Find the parent book card
+        const book = {
+            title: bookCard.find(".bookTitle").text(),
+            rental: bookCard.find(".rental").text(),
+            deposit: bookCard.find(".deposit").text()
+        };
+
+        const bookExists = currentUser.wishlist.some((lovedBook) => lovedBook.title === book.title);
+
+        if(bookExists) {
+            alert("This book is already in your wishlist!");
+        } else {
+            alert(`${book.title} successfully added to your wishlist!`);
+            currentUser.wishlist.push(book);
+            localStorage.setItem(currentUser.username, JSON.stringify(currentUser));
+        }
+    });
+
+     // Event listener for the cart button
+     $(".bookContainer").on("click", ".cart-btn", function () {
+        const bookCard = $(this).closest(".bookCard"); // Find the parent book card
+        const book = {
+            title: bookCard.find(".bookTitle").text(),
+            rental: bookCard.find(".rental").text(),
+            deposit: bookCard.find(".deposit").text(),
+            quantity:1
+        };
+
+        const bookExists = currentUser.cart.some((lovedBook) => lovedBook.title === book.title);
 
         if(bookExists) {
             alert("This book is already in your cart!");
         } else {
-            alert(`Successfully added to your cart!`);
-            currentUser.cart.push(bookId);
+            alert(`${book.title} successfully added to your cart!`);
+            currentUser.cart.push(book);
             localStorage.setItem(currentUser.username, JSON.stringify(currentUser));
         }
     });
+    
+    
+    
+    
   
 })
