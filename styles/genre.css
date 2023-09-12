@@ -19,10 +19,11 @@ body {
     transition: all ease 0.25s;
 }
 .filterContainer{
-    padding: 1.2rem 0;
-    width: 100%;
+    padding: 0.2rem 0.2rem;
+    width: 90%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 .filterContainer h1{
     color: #EC994B;
@@ -31,6 +32,7 @@ body {
     font-size: 70px;
 }
 .filter{
+    height: 1.5rem;
     margin-top: 20px;
     padding-left: 0.5rem;
     padding-right: 3rem;
@@ -56,7 +58,7 @@ body {
     margin: 10px;
     margin-bottom:22px;
     margin-top:0;
-    box-shadow: 5px 5px 20px black;
+    box-shadow: 3px 3px 10px rgb(14, 14, 14,0.7);
     overflow: hidden;
 }
 .details{
@@ -137,6 +139,10 @@ p{
 @media (max-width: 900px) {
     .bookContainer{
         grid-template-columns: repeat(2,auto);
+    }
+    .filterContainer{
+        flex-direction: column;
+        align-items: center;
     }
     .filterContainer h1{
         font-size: 56px;
