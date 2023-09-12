@@ -66,20 +66,6 @@ $(function(){
        
     });
 
-    
-     // Event listener for the love button
-     $(".love-btn").click(() => {
-        const bookExists = currentUser.wishlist.some((lovedBook) => lovedBook.title === book.title);
-
-        if(bookExists) {
-            alert("This book is already in your wishlist!");
-        } else {
-            alert(`${book.title} successfully added to your wishlist!`);
-            currentUser.wishlist.push(book);
-            localStorage.setItem(currentUser.username, JSON.stringify(currentUser));
-        }
-    });
-
     // Event listener for the love button
     $(".bookContainer").on("click", ".love-btn", function () {
         const bookCard = $(this).closest(".bookCard"); // Find the parent book card
