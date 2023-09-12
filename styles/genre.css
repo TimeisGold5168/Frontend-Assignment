@@ -44,8 +44,7 @@ body {
 }
 
 .bookContainer{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 1.5rem 0.5rem;
     border-radius: 22px;
     margin:auto;
     display: grid;
@@ -54,7 +53,9 @@ body {
 }
 .bookCard{
     height: 350px;
-    margin: 40px;
+    margin: 10px;
+    margin-bottom:22px;
+    margin-top:0;
     box-shadow: 5px 5px 20px black;
     overflow: hidden;
 }
@@ -105,12 +106,12 @@ p{
     transition: ease 0.25s;
 }
 .bookCard:hover .btnContainer{
-    height: 30px;
+    height: 40px;
     padding-top: 1.5rem;
     position: absolute;
     bottom: 30px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
     left: 0;
     right: 0;

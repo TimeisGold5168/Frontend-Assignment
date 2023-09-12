@@ -50,8 +50,6 @@ $(function(){
                 });
             })
         }
-
-       
     };
 
     products.forEach(product =>{
@@ -122,9 +120,4 @@ $(function(){
             localStorage.setItem(currentUser.username, JSON.stringify(currentUser));
         }
     });
-    
-    
-    
-    
-  
 })
