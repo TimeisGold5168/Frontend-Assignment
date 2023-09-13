@@ -20,6 +20,7 @@
                 <p class="h1" style="font-style: italic;font-weight: bold;color: #EC994B;">Weather-Based Book Recommendations</p>
             </div>
             <div class="row">
+
                 <div class="col-md-4">
                     <div class="weather-container">
                         <div class="search-box">
@@ -55,22 +56,38 @@
                     </div>
                 </div>
     
-                <div class="col-md-8">
+                <div class="col-md-8 pr-0">
                     <div class="book-recommendations bg-light p-4 " style= "border-radius: 30px;">
                         <h1 style="border-bottom:1px solid #EC994B">Book Recommendation</h1>
-                        <h3 class="book-desc py-4">Recommended Book Type:</h3>
-                        <div class="book py-4">
-                            <img src="" alt="Book Cover">
-                            <h3 class="title py-4">Book Title</h3>
-                            <p class="author py-2">Author: Author Name</p>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="book">
+                                    <h3 class="book-type py-4">Recommended Book Type:</h3>
+                                    <div class="book-info">
+                                        <h3 class="title py-2">Book Title: </h3>
+                                        <h3 class="author py-2">Book Author: </h3>
+                                    </div>
+                                    <div class="btn-container">
+                                        <!-- <img src="../images/icon/cart_icon.png" alt="card" class="p-0 pr-4 btn cart-btn">
+                                        <img src="../images/icon/love_icon.png" alt="love" class="p-0 btn love-btn"> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 p-0 d-flex justify-content-center align-items-center">
+                                <div class="book-cover">
+                                    <!-- <img src="${bookInfo.image}" alt="No Book Cover"> -->
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
     <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
     <script src="../scripts/weather.js"></script>
+    <script src="../scripts/products.js"></script>
 </body>
 </html>
