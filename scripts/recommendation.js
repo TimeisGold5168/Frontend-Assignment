@@ -19,14 +19,6 @@ $(function() {
             type: 'GET',
             dataType: 'json',
             success: function(json) {
-                if (json.cod === '404') {
-                    container.css('height', '400px');
-                    weatherBox.hide();
-                    weatherDetails.hide();
-                    error404.show();
-                    error404.addClass('fadeIn');
-                    return;
-                }
 
                 error404.hide();
                 error404.removeClass('fadeIn');
@@ -78,12 +70,18 @@ $(function() {
                 weatherBox.addClass('fadeIn');
                 weatherDetails.addClass('fadeIn');
                 container.css('height', '590px');     
+            },
+            error: function () {
+                $('.container').css('height', '400px');
+                $('.weather-box').hide();
+                $('.weather-details').hide();
+                $('.not-found').show();
+                $('.not-found').addClass('fadeIn');
+                return;
             }
             
 
         });
-        
-
     });
     const displayGenre = genre=> {
         $.get(`https://openlibrary.org/subjects/${genre}.json`,data=>{
@@ -105,10 +103,46 @@ $(function() {
     const displayBook = bookInfo =>{
         $(".title").text("Book Title: " + bookInfo.title);
         $(".author").text("Book Author: " + bookInfo.author);
-        $(".book-cover").html(`<img width=200px height=300px src="${bookInfo.image}" alt="No Book Cover">`);
+        $(".rental").text("Rental : " + bookInfo.rental);
+        $(".deposit").text("Deposit : " + bookInfo.deposit);
+        $(".book-cover").html(`<img width=245px height=350px src="${bookInfo.image}" alt="No Book Cover">`);
         $(".btn-container").html(`
-            <img height=64px src="../images/icon/cart_black.png" alt="card" class="pr-4 btn cart-btn">
-            <img height=64px src="../images/icon/love_black.png" alt="love" class="btn love-btn">
+            <img src="../images/icon/cart_black.png" alt="cart" class="cart-btn pr-4 btn">
+            <img src="../images/icon/love_black.png" alt="love" class="btn love-btn">
         `)
-    }
+        $(".love-btn").click(() => {
+            const book = {
+                title: bookInfo.title,
+                rental: bookInfo.rental,
+                deposit: bookInfo.deposit,
+            };
+            const bookExists = currentUser.wishlist.some((lovedBook) => lovedBook.title === book.title);
+    
+            if(bookExists) {
+                alert("This book is already in your wishlist!");
+            } else {
+                alert(`${book.title} successfully added to your wishlist!`);
+                currentUser.wishlist.push(book);
+                localStorage.setItem(currentUser.username, JSON.stringify(currentUser));
+            }
+        });
+        $(".cart-btn").click(() => {
+            const book = {
+                title: bookInfo.title,
+                rental: bookInfo.rental,
+                deposit: bookInfo.deposit,
+                quantity:1,
+            };
+            const bookExists = currentUser.cart.some((cartBook) => cartBook.title === book.title);
+    
+            if(bookExists) {
+                alert("This book is already in your wishlist!");
+            } else {
+                alert(`${book.title} successfully added to your wishlist!`);
+                currentUser.cart.push(book);
+                localStorage.setItem(currentUser.username, JSON.stringify(currentUser));
+            }
+        });
+    };
+    
 });
