@@ -103,8 +103,8 @@ $(function() {
     const displayBook = bookInfo =>{
         $(".title").text("Book Title: " + bookInfo.title);
         $(".author").text("Book Author: " + bookInfo.author);
-        $(".rental").text("Rental : " + bookInfo.rental);
-        $(".deposit").text("Deposit : " + bookInfo.deposit);
+        $(".rental").text("Rental : RM" + bookInfo.rental);
+        $(".deposit").text("Deposit : RM" + bookInfo.deposit);
         $(".book-cover").html(`<img width=245px height=350px src="${bookInfo.image}" alt="No Book Cover">`);
         $(".btn-container").html(`
             <img src="../images/icon/cart_black.png" alt="cart" class="cart-btn pr-4 btn">
@@ -113,8 +113,8 @@ $(function() {
         $(".love-btn").click(() => {
             const book = {
                 title: bookInfo.title,
-                rental: bookInfo.rental,
-                deposit: bookInfo.deposit,
+                rental: `Rental:RM ${bookInfo.rental}`,
+                deposit: `Deposit:RM ${bookInfo.deposit}`,
             };
             const bookExists = currentUser.wishlist.some((lovedBook) => lovedBook.title === book.title);
     
@@ -129,8 +129,8 @@ $(function() {
         $(".cart-btn").click(() => {
             const book = {
                 title: bookInfo.title,
-                rental: bookInfo.rental,
-                deposit: bookInfo.deposit,
+                rental: `Rental:RM ${bookInfo.rental}`,
+                deposit: `Deposit:RM ${bookInfo.deposit}`,
                 quantity:1,
             };
             const bookExists = currentUser.cart.some((cartBook) => cartBook.title === book.title);
