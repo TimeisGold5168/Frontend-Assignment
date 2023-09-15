@@ -2,15 +2,17 @@ let defaultUsers = [{
     username: "user123", 
     password: "123", 
     email:"123@123.com",
+    receivedate : "20/10",
     wishlist: [],
-    cart:[] 
+    cart:[] ,
     },
     { 
     username: "user456", 
     password: "456",
     email:"456@456.com",
     wishlist:[],
-    cart: []
+    cart: [],
+    receivedate : " ",
     },
 ];
 

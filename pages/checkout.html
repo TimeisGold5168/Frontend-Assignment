@@ -208,7 +208,7 @@
                     class="form-control"
                     placeholder="Email ADDRESS"
                     required
-                    id="Address"
+                    id="emailAddress"
                     autocomplete="email"
                   />
                 </div>
@@ -252,11 +252,75 @@
 
         </div>
       </div>
+      <div >
+        <div class="row justify-content-center align-items-center h-50 mt-5">
+          <div class="col">
+            <p
+              style="
+                color: #ec994b;
+                font-style: italic;
+                font-weight: 700;
+                font-size: 70px;
+                margin-bottom: 0px;
+              "
+            >
+              BILLING DETAILS
+            </p>
+          </div>
+        </div>
+        <div class="containerP">
+
+          <form action="">
+      
+              <div class="row">
+      
+                  <div class="col">
+      
+                      <div class="inputBox">
+                          <span>cards accepted :</span>
+                          <img src="../images/card_img.png" alt="">
+                      </div>
+                      <div class="inputBox">
+                          <span>name on card :</span>
+                          <input type="text" placeholder="Ex: Lao mang kai" required id="Creditname" autocomplete="cc-name">
+                      </div>
+                      <div class="inputBox">
+                          <span>credit card number :</span>
+                          <input type="number" placeholder="1111-2222-3333-4444"  required id="CreditNo" autocomplete="cc-number">
+                      </div>
+                      <div class="inputBox">
+                          <span>exp month :</span>
+                          <input type="text" placeholder="january"  required id="Expmonth" autocomplete="cc-exp-month">
+                      </div>
+      
+                      <div class="flex">
+                          <div class="inputBox">
+                              <span>exp year :</span>
+                              <input type="number" placeholder="2022"  required id="Expyear" autocomplete="cc-exp-year">
+                          </div>
+                          <div class="inputBox">
+                              <span>CVV :</span>
+                              <input type="text" placeholder="***"  required id="CVV" autocomplete="cc-csc">
+                          </div>
+                      </div>
+      
+                  </div>
+          
+              </div>
+      
+              <input type="submit" value="proceed to checkout" class="submit-btn">
+      
+          </form>
+      
+      </div>    
+
+
+      </div>
 
     <script src="../scripts/products.js"></script>
     <script src=" ../scripts/Calendarscript.js"></script>
-    <!--  <script src="../scripts/currentUser.js"></script> -->
+   <!--  <script src="../scripts/currentUser.js"></script>  -->
     <script src="../scripts/cart.js"></script>
-    -->
+    
   </body>
 </html>

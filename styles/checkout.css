@@ -114,7 +114,7 @@ input[type="text"]
   .day{
     text-align: center;
     padding: 5px;
-    color: #999FA6;
+    color: #183e6a;
     font-weight:500;
   }
   
@@ -141,8 +141,7 @@ input[type="text"]
     transition: 0.2s;
   }
   
-  .date:hover,
-.date.selected{
+  .date.active:hover{
   background: #EC994B;
   color:  #fff;
 }
@@ -151,7 +150,91 @@ input[type="text"]
     color: #d2d2d2;
   }
   
-  .date.inactive:hover{
-    color: #fff;
+  .containerP *{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    font-size: 2vw;
   }
   
+  
+  
+  .containerP form{
+    
+    padding:3vw;
+    width:auto;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    border-radius: 20px;
+    margin-bottom: 2vw;
+  }
+  
+  .containerP form .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:2vw;
+  }
+  
+  .containerP form .row .col{
+    flex:1 1 250px;
+  }
+  
+  .containerP form .row .col .title{
+    font-size: 20px;
+    color:#333;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+  }
+  
+  .containerP form .row .col .inputBox{
+    margin:15px 0;
+  }
+  
+  .containerP form .row .col .inputBox span{
+    margin-bottom: 10px;
+    display: block;
+    font-weight: 600;
+  }
+  
+  .containerP form .row .col .inputBox input{
+    width: 100%;
+    border:1px solid #ccc;
+    padding:10px 15px;
+    font-size: 15px;
+    text-transform: none;
+  }
+  
+  .containerP form .row .col .inputBox input:focus{
+    border:1px solid #000;
+  }
+  
+  .containerP form .row .col .flex{
+    display: flex;
+    gap:15px;
+  }
+  
+  .containerP form .row .col .flex .inputBox{
+    margin-top: 5px;
+  }
+  
+  .containerP form .row .col .inputBox img{
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+  }
+  
+  .containerP form .submit-btn{
+    width: 100%;
+    padding:12px;
+    font-size: 17px;
+    background: #EC994B;
+    color:#fff;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  
+  .containerP form .submit-btn:hover{
+    background: #2ecc71;
+  }

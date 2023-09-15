@@ -17,7 +17,8 @@ loginForm.addEventListener("submit", (e) => {
             password: password, 
             email: email,
             wishlist: [],
-            cart:[]
+            cart:[],
+            receivedate : "",
         };
         users.push(newUser);
         localStorage.setItem("users",JSON.stringify(users));
