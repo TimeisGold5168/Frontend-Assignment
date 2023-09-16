@@ -119,13 +119,13 @@ p{
     right: 0;
     opacity: 1;
 }
-.btn{
+.addbtn{
     width: 24px;
     height: 24px;
     cursor: pointer;
     transition: 0.25s;
 }
-.btn:hover{
+.addbtn:hover{
     transform: translateY(-5px);
     opacity: 0.8;
 }
