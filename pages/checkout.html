@@ -15,18 +15,22 @@
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+ 
+  <link rel="stylesheet" href="../styles/shared.css" />
   <link rel="stylesheet" href="../styles/checkout.css" />
+
 </head>
 
 <body>
-  <div class="container">
+  <div id="header"></div>
+  <div class="container mt-5">
     <div class="row justify-content-center align-items-center h-50">
       <div class="col">
         <p style="
               color: #ec994b;
               font-style: italic;
               font-weight: 700;
-              font-size: 70px;
+              font-size: 5vw;
               margin-bottom: 0px;
             ">
           OrderDetails
@@ -35,7 +39,7 @@
           <div class="card p-5" style="border-radius: 30px">
             <div class="row" style="font-style: italic; font-weight: 700">
               <div class="col-sm-6">
-                <p style="font-size: 1.5vw">PRODUCT</p>
+                <p style="font-size: 1.5vw;padding-left: 2vw;">PRODUCT</p>
               </div>
               <div class="col-sm-2">
                 <p style="font-size: 1.5vw">PRICE</p>
@@ -49,17 +53,15 @@
             </div>
             <div class="card-body p-4" style="border-radius: 20px">
               <div class="description row align-items-start" ;>
-                <div class="cart-name col-md-6">
-                  <p style="font-size: 1.5vw"></p>
+                <div class="checkout-name col-md-6">
+          
                 </div>
-                <div class="cart-price col-md-2">
-                  <p style="font-size: 1.5vw"></p>
+                <div class="checkout-price col-md-2">
                 </div>
-                <div class="cart-quantity col-md-2">
-                  <p style="font-size: 1.5vw"></p>
+                <div class="checkout-quantity col-md-2">
                 </div>
-                <div class="cart-subtotal col-md-2">
-                  <p style="font-size: 1.5vw"></p>
+                <div class="checkout-subtotal col-md-2">
+                  
                 </div>
               </div>
             </div>
@@ -70,7 +72,7 @@
             <div class="container" style="font-style: italic; font-weight: 700; font-size: 1.5vw">
               <div class="row my-2">
                 <div class="col-sm-10">
-                  <div class="custom-text-right">ITEM SUBTOTAL:</div>
+                  <div class="custom-text-right my-2">ITEM SUBTOTAL:</div>
                 </div>
                 <div class="col-sm-2">
                   <div class="text-start Checkout-subtotal"></div>
@@ -103,12 +105,12 @@
               color: #ec994b;
               font-style: italic;
               font-weight: 700;
-              font-size: 70px;
+              font-size: 5vw;
               margin-bottom: 0px;
             ">
           BILLING DETAILS
         </p>
-        <div class="container">
+        <div class="containeraddress">
           <form>
             <div class="row my-4">
               <div class="col-sm-6">
@@ -122,8 +124,14 @@
             </div>
             <div class="row my-4">
               <div class="col">
-                <input type="text" class="form-control" placeholder="STREET ADDRESS" required id="Address"
+                <input type="text" class="form-control" placeholder="STREET ADDRESS LINE 1" required id="Address1"
                   autocomplete="street-address" />
+              </div>
+            </div>
+            <div class="row my-4">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="STREET ADDRESS LINE 2" required id="Address2"
+                   />
               </div>
             </div>
             <div class="row my-4">
@@ -163,7 +171,7 @@
         </div>
       </div>
     </div>
-    <div class="my-2">
+    <div class="calanderanimation my-2">
       <p style="font-size: 2vw;color: #EC994B;font-style: italic;"> When to Deliver?</p>
       <div class="my-2">
         <div class="calendar">
@@ -198,16 +206,16 @@
                 color: #ec994b;
                 font-style: italic;
                 font-weight: 700;
-                font-size: 70px;
+                font-size: 4.9vw;
                 margin-bottom: 0px;
               ">
-            BILLING DETAILS
+            PAYMENT METHOD
           </p>
         </div>
       </div>
       <div class="containerP">
 
-        <form action="">
+        <form id="paymentForm" action="">
 
           <div class="row">
 
@@ -223,11 +231,11 @@
               </div>
               <div class="inputBox">
                 <span>credit card number :</span>
-                <input type="number" placeholder="1111-2222-3333-4444" required id="CreditNo" autocomplete="cc-number">
+                <input type="tel" placeholder="1111-2222-3333-4444" required id="CreditNo" autocomplete="cc-number">
               </div>
               <div class="inputBox">
                 <span>exp month :</span>
-                <input type="text" placeholder="january" required id="Expmonth" autocomplete="cc-exp-month">
+                <input class="upper" type="text" placeholder="january" required id="Expmonth" autocomplete="cc-exp-month">
               </div>
 
               <div class="flex">
@@ -253,12 +261,13 @@
 
 
     </div>
+    <div id="footer" class="container mb-4"></div>
 
-
-
+    <script src="../scripts/header-footer-import.js"></script>
     <script src="../scripts/products.js"></script>
+    <script src=" ../scripts/checkout.js"></script>
     <script src=" ../scripts/Calendarscript.js"></script>
-    <!--  <script src="../scripts/currentUser.js"></script>  -->
+     <script src="../scripts/currentUser.js"></script>  
     <script src="../scripts/cart.js"></script>
 
 </body>
