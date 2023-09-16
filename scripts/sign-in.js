@@ -29,7 +29,7 @@ loginForm.addEventListener("submit", (e) => {
         }
         localStorage.setItem(username, JSON.stringify(user));
         //redirect to somewhere
-        window.location.href = "genre.html";
+        window.location.href = "landing-page.html";
     } else {
         alert("Invalid username or password. Please try again.");
     }
