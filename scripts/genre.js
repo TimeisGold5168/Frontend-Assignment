@@ -13,8 +13,8 @@ $(function(){
                             <p>${book.summary}</p>
                         </div>
                         <div class="btnContainer">
-                            <img src="../images/icon/cart_icon.png" class="btn cart-btn">
-                            <img src="../images/icon/love_icon.png" class="btn love-btn">
+                            <img src="../images/icon/cart_icon.png" class="addbtn cart-btn">
+                            <img src="../images/icon/love_icon.png" class="addbtn love-btn">
                         </div>
                     </div>
                 </div>
