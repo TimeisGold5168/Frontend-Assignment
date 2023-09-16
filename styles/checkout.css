@@ -23,6 +23,7 @@ display:flex;
   justify-content: center;
   transition: all 0.5s;
   animation: fade-in 1s;
+  size: 80%;
 }
 
 .card{
@@ -134,7 +135,7 @@ input[type="text"]
   
   .day{
     text-align: center;
-    padding: 5px;
+    padding: 1vw;
     color: #183e6a;
     font-weight:500;
   }
@@ -151,15 +152,16 @@ input[type="text"]
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 10px;
+    padding: 1vw;
     margin: auto;
     cursor: pointer;
     font-size: 1.5vw;
     font-weight: 600;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 1vw;
+    height: 3vw;
     transition: 0.2s;
+
   }
   
   .date.active:hover{
@@ -172,6 +174,7 @@ input[type="text"]
     color: #d2d2d2;
   }
   
+
   .containerP *{
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
@@ -185,8 +188,8 @@ input[type="text"]
   
   .containerP form{
     
-    padding:3vw;
-    width:auto;
+    padding:2vw;
+    width:50%;
     background: #fff;
     box-shadow: 0 5px 10px rgba(0,0,0,.1);
     border-radius: 20px;
@@ -218,14 +221,19 @@ input[type="text"]
     margin-bottom: 10px;
     display: block;
     font-weight: 600;
+    font-size: 1.5vw;
   }
   
   .containerP form .row .col .inputBox input{
     width: 100%;
     border:1px solid #ccc;
-    padding:10px 15px;
-    font-size: 15px;
+    padding:1vw;
+    font-size: 1vw;
     text-transform: none;
+  }
+
+  .containerP form .row .col .inputBox input::placeholder{
+    font-size: 1.5vw;
   }
   
   .containerP form .row .col .inputBox input:focus{
@@ -234,7 +242,7 @@ input[type="text"]
   
   .containerP form .row .col .flex{
     display: flex;
-    gap:15px;
+    gap:1vw;
   }
   
   .containerP form .row .col .flex .inputBox{
@@ -242,15 +250,15 @@ input[type="text"]
   }
   
   .containerP form .row .col .inputBox img{
-    height: 34px;
+    height: 2vw;
     margin-top: 5px;
     filter: drop-shadow(0 0 1px #000);
   }
   
   .containerP form .submit-btn{
     width: 100%;
-    padding:12px;
-    font-size: 17px;
+    padding:1vw;
+    font-size: 1.2vw;
     background: #EC994B;
     color:#fff;
     margin-top: 5px;

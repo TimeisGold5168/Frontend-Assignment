@@ -26,7 +26,7 @@
               color: #ec994b;
               font-style: italic;
               font-weight: 700;
-              font-size: 70px;
+              font-size: 5vw;
               margin-bottom: 0px;
             ">
           OrderDetails
@@ -103,7 +103,7 @@
               color: #ec994b;
               font-style: italic;
               font-weight: 700;
-              font-size: 70px;
+              font-size: 5vw;
               margin-bottom: 0px;
             ">
           BILLING DETAILS
@@ -122,8 +122,14 @@
             </div>
             <div class="row my-4">
               <div class="col">
-                <input type="text" class="form-control" placeholder="STREET ADDRESS" required id="Address"
+                <input type="text" class="form-control" placeholder="STREET ADDRESS LINE 1" required id="Address1"
                   autocomplete="street-address" />
+              </div>
+            </div>
+            <div class="row my-4">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="STREET ADDRESS LINE 2" required id="Address2"
+                   />
               </div>
             </div>
             <div class="row my-4">
@@ -163,7 +169,7 @@
         </div>
       </div>
     </div>
-    <div class="my-2">
+    <div class="calanderanimation my-2">
       <p style="font-size: 2vw;color: #EC994B;font-style: italic;"> When to Deliver?</p>
       <div class="my-2">
         <div class="calendar">
@@ -198,10 +204,10 @@
                 color: #ec994b;
                 font-style: italic;
                 font-weight: 700;
-                font-size: 70px;
+                font-size: 4.9vw;
                 margin-bottom: 0px;
               ">
-            BILLING DETAILS
+            PAYMENT METHOD
           </p>
         </div>
       </div>
@@ -223,7 +229,7 @@
               </div>
               <div class="inputBox">
                 <span>credit card number :</span>
-                <input type="number" placeholder="1111-2222-3333-4444" required id="CreditNo" autocomplete="cc-number">
+                <input type="tel" placeholder="1111-2222-3333-4444" required id="CreditNo" autocomplete="cc-number">
               </div>
               <div class="inputBox">
                 <span>exp month :</span>
