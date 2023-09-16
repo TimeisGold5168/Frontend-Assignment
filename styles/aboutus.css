@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Lumanosimo&family=Poppins:ital,wght@0,400;1,100&display=swap');
+
+@keyframes fade-in{
+    0%{
+      opacity: 0;
+      transform: translateX(-50px)
+    }
+    
+    100%{
+      opacity:1;
+      transform: translateY(0px);
+    }
+    }
+    
+    
+  
+  /* Apply the animation to your text */
+
+
+body {
+    background-color: #15133C;
+    display:flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+.container-fluid p{
+    padding-left: 11vw;
+    text-align: left;
+    font-size: 2vw;
+    font-stretch: expanded;
+    font-family: "Bodoni Moda";
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+    
+    
+}
+
+.container-fluid{
+    transition: all 5s;
+    animation: fade-in 3s;
+}
+
+
+.fbpost{
+  max-height: 100vw; /* Adjust the height as per your preference */
+  margin: 1vw;
+  overflow: hidden; 
+    width: auto;
+    background-color: white;
+    transition: all 5s;
+    animation: fade-in 3s;
+   }
+
+  
+ 
