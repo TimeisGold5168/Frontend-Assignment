@@ -100,6 +100,18 @@
     background: linear-gradient(to bottom, #3bb78f, #0bab64);
 }
 .check-out-btn:hover{ color: #15133C    ; }
-@media only screen and (max-width: 767px){
-    .check-out-btn{ margin-bottom: 20px; }
+@media (max-width: 768px){
+    .check-out-btn{ 
+        margin-bottom: 20px;
+    }
+}
+@media (max-width:1024px){
+    .check-out-btn{
+        font-size: 12px;
+    }
+}
+@media (max-width:768px){
+    .check-out-btn{
+        font-size:10px;
+    }
 }
