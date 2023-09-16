@@ -1,4 +1,7 @@
 $(function(){
+    $(".check-out-btn").click(()=>{
+        window.location.href = "checkout.html";
+    })
 
     for(let i=0; i<currentUser.cart.length; i++){
         const deposit = parseInt(currentUser.cart[i].deposit.split(" ")[1]);

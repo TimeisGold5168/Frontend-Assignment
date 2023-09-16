@@ -101,10 +101,10 @@ $(function() {
         });
     };
     const displayBook = bookInfo =>{
-        $(".title").text("Book Title: " + bookInfo.title);
-        $(".author").text("Book Author: " + bookInfo.author);
-        $(".rental").text("Rental : RM" + bookInfo.rental);
-        $(".deposit").text("Deposit : RM" + bookInfo.deposit);
+        $(".book-title").text("Book Title: " + bookInfo.title);
+        $(".book-author").text("Book Author: " + bookInfo.author);
+        $(".book-rental").text("Rental : RM" + bookInfo.rental);
+        $(".book-deposit").text("Deposit : RM" + bookInfo.deposit);
         $(".book-cover").html(`<img width=245px height=350px src="${bookInfo.image}" alt="No Book Cover">`);
         $(".btn-container").html(`
             <img src="../images/icon/cart_black.png" alt="cart" class="cart-btn pr-4 btn">
