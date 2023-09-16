@@ -19,6 +19,24 @@ loginForm.addEventListener("submit", (e) => {
             wishlist: [],
             cart:[],
             receivedate : "",
+            membership: "none",
+            address: {
+            firstName: "",
+            lastName: "",
+            addressLine1: "",
+            addressLine2: "",
+            city: "",
+            state: "",
+            postalCode: "",
+            phoneNumber: "",
+            },
+            payment: {
+                cardname: "",
+                cardNo: "",
+                expMth: "",
+                expYr: "",
+                CVV: "",
+            },
         };
         users.push(newUser);
         localStorage.setItem("users",JSON.stringify(users));
