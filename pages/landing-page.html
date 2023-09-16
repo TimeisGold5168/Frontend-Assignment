@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LetsBook</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../styles/shared.css" />
+    <link rel="stylesheet" href="../styles/landing-page.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <div class="container">
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner mt-4">
+          <div class="carousel-item active">
+            <img
+              src="../images/poster1.svg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../images/poster2.svg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../images/poster3.svg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <section class="container mt-4">
+      <h2 class="title ms-4 my-0">NEW YORK TIMES BEST SELLER (FICTION)</h2>
+      <div class="popular bestsellers-fiction py-4"></div>
+    </section>
+
+    <section class="container mt-4">
+      <h2 class="title ms-4 my-0">NEW YORK TIMES BEST SELLER (NON-FICTION)</h2>
+      <div class="popular bestsellers-nonfiction py-4"></div>
+    </section>
+
+    <section class="container my-4 inter-font">
+      <h2 class="title ms-4 my-0">SUBSCRIPTION PLAN</h2>
+      <div class="pricing py-4 text-center">
+        <div class="card">
+          <div class="card-header"><h4 class="my-0">Lite</h4></div>
+          <div class="card-body">
+            <h1>
+              RM60<small class="text-body-secondary fw-light">/year</small>
+            </h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Unlimited rent</li>
+              <li>RM10 per rent</li>
+              <li>Maximum 2 books per rent</li>
+            </ul>
+            <button class="btn btn-outline-blue">Subscribe now</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header"><h4 class="my-0">Standard</h4></div>
+          <div class="card-body">
+            <h1>
+              RM120<small class="text-body-secondary fw-light">/year</small>
+            </h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Unlimited rent</li>
+              <li>RM10 per rent</li>
+              <li>Maximum 3 books per rent</li>
+            </ul>
+            <button class="btn btn-light-blue">Subscribe now</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header"><h4 class="my-0">Pro</h4></div>
+          <div class="card-body">
+            <h1>
+              RM200<small class="text-body-secondary fw-light">/year</small>
+            </h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Unlimited rent</li>
+              <li>RM10 per rent</li>
+              <li>Maximum 4 books per rent</li>
+            </ul>
+            <button class="btn btn-blue">Subscribe now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer" class="container mb-4"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../scripts/header-footer-import.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/7c8801c017.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(function () {
+        // Load the JSON configuration file
+        $.getJSON("../config.json", function (config) {
+          // Check if the API_KEY is defined in the configuration
+          if (config.API_KEY) {
+            // Use the API key in your code
+            var apiKey = config.API_KEY;
+
+            // Rest of your code remains the same, but now you have the API key
+            var apiUrl =
+              "https://api.nytimes.com/svc/books/v3/lists/overview.json";
+            var lists =
+              "Combined Print and E-Book Fiction, Combined Print and E-Book Nonfiction";
+            var requestData = {
+              "api-key": apiKey,
+              list: lists,
+            };
+
+            $.ajax({
+              url: apiUrl,
+              method: "GET",
+              data: requestData,
+              dataType: "json",
+              success: function (data) {
+                var fictionList = data.results.lists[0].books.slice(0, 5);
+                var nonFictionList = data.results.lists[1].books.slice(0, 5);
+
+                fictionList.forEach((book) => {
+                  $(".bestsellers-fiction").append(
+                    `<img src='${book.book_image}'>`
+                  );
+                });
+                nonFictionList.forEach((book) => {
+                  $(".bestsellers-nonfiction").append(
+                    `<img src='${book.book_image}'>`
+                  );
+                });
+              },
+              error: function (xhr, status, error) {
+                console.error(status, error);
+              },
+            });
+          } else {
+            console.error("API_KEY is missing in the configuration file.");
+          }
+        }).fail(function () {
+          console.error("Failed to load the configuration file.");
+        });
+      });
+    </script>
+  </body>
+</html>

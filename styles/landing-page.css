@@ -1,0 +1,36 @@
+
+
+.carousel-inner {
+    border-radius: 20px;
+}
+
+.popular {
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #f1eee9;
+}
+
+.popular>img {
+    width: 150px;
+    height: 225px;
+    object-fit: cover;
+}
+
+.pricing {
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #f1eee9;
+}
+
+.card {
+    min-width: 30%;
+}
+
