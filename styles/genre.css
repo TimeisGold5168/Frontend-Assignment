@@ -48,7 +48,7 @@ body {
 .bookContainer{
     padding: 1.5rem 0.5rem;
     border-radius: 22px;
-    margin:auto;
+    margin-bottom: 2rem;
     display: grid;
     grid-template-columns: repeat(4,auto);
     background-color: whitesmoke;
