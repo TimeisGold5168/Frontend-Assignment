@@ -1,62 +1,52 @@
 $(function () {
-    var recentSearches = [];
+    const MAX_RECENT_SEARCHES = 5;
+    const $searchField = $('.search-field');
+    const $searchHistory = $('.search-history');
+    const $historyItems = $('.hist1, .hist2, .hist3, .hist4, .hist5');
 
-    if (localStorage.getItem('recentSearches')) {
-        recentSearches = JSON.parse(localStorage.getItem('recentSearches'));
-        displayRecentSearches(recentSearches);
-    }
+    let recentSearches = JSON.parse(localStorage.getItem('recentSearches')) || [];
 
     function displayRecentSearches(searches) {
-        searches = searches.slice(0, 5);
-
-        $('.hist1').text(searches[0]);
-        $('.hist2').text(searches[1]);
-        $('.hist3').text(searches[2]);
-        $('.hist4').text(searches[3]);
-        $('.hist5').text(searches[4]);
+        $historyItems.each((index, item) => {
+            $(item).text(searches[index] || '');
+        });
     }
 
-    $('.search-field').focus(function () {
-        $('.search-history').show();
+    $searchField.focus(() => {
+        $searchHistory.show();
     });
 
-    $(document).on('click', function (event) {
+    $(document).on('click', (event) => {
         if (!$(event.target).closest('.search-field, .search-history').length) {
-            $('.search-history').hide();
+            $searchHistory.hide();
         }
     });
 
-    // Populate the text field with the clicked history item and hide the search history
-    $('.hist1, .hist2, .hist3, .hist4, .hist5').click(function () {
-        var clickedText = $(this).text();
-        $('.search-field').val(clickedText);
-        $('.search-history').hide();
+    $historyItems.click(function () {
+        $searchField.val($(this).text());
+        $searchHistory.hide();
     });
 
     function addSearchToHistory(query) {
-        var index = recentSearches.indexOf(query); // check if the query already exists in the recentSearches array
-        
+        const index = recentSearches.indexOf(query);
         if (index !== -1) {
-            recentSearches.splice(index, 1); //if the query exists, remove it from the array
+            recentSearches.splice(index, 1);
         }
-       
-        recentSearches.unshift(query); // Add the new query to the beginning of the array
-        recentSearches = recentSearches.slice(0, 5); // Limit to the 5 most recent searches
-
-        //update the local storage and display the recent searches
+        recentSearches.unshift(query);
+        recentSearches = recentSearches.slice(0, MAX_RECENT_SEARCHES);
         localStorage.setItem('recentSearches', JSON.stringify(recentSearches));
         displayRecentSearches(recentSearches);
     }
 
     $('.search-bar').submit(function (e) {
         e.preventDefault();
-        
-        var searchTerm = $('.search-field').val();
-
-        if (searchTerm.trim() !== '') {
+        const searchTerm = $searchField.val().trim();
+        if (searchTerm !== '') {
             addSearchToHistory(searchTerm);
             window.location.href = './search-result.html';
         }
     });
 
+    // Initial display of recent searches
+    displayRecentSearches(recentSearches);
 });

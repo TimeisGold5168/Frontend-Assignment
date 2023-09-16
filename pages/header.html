@@ -16,7 +16,7 @@
           type="submit"
           style="border: none"
         >
-          <img src="../images-my/search.svg" alt="" width="20px" />
+          <img src="../images/search.svg" alt="" width="20px" />
         </button>
       </form>
       <div class="search-history">
@@ -45,5 +45,34 @@
     </ul>
   </div>
 
+  <i
+    id="menu-bars"
+    class="fa-solid fa-bars"
+    style="color: #f1eee9"
+  ></i>
+
+  <div class="menu-container" id="menuModal">
+    <div class="menu-content">
+      <a href="./recommendation.html">RECOMMENDATION</a>
+      <a href="./genre.html">GENRE</a>
+      <a href="./account.html">ACCOUNT</a>
+      <a href="./cart.html">CART</a>
+
+      <button class="btn btn-blue exit">Close</button>
+    </div>
+  </div>
 </header>
 
+<script>
+  var elementToMove = $('.search-container');
+  elementToMove.detach();
+  elementToMove.prependTo('.menu-content');
+
+  $("#menu-bars").click(function () {
+    $("#menuModal").show();
+  });
+
+  $(".exit").click(function () {
+    $("#menuModal").hide();
+  });
+</script>

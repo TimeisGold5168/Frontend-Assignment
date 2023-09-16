@@ -13,8 +13,8 @@ $(function () {
                                 <p>${book.summary}</p>
                             </div>
                             <div class="btnContainer">
-                                <button class='cart-btn px-4 py-1 me-3'><i class="fa-solid fa-cart-shopping me-2" style="color: #15133c;"></i>Add to cart</button>
-                                <button class='love-btn px-4 py-1'><i class="fa-solid fa-heart me-2" style="color: #15133c;"></i>Add to wishlist</button>
+                                <button class='cart-btn btn btn-outline-blue px-4 py-1 me-3'><i class="fa-solid fa-cart-shopping me-2" style="color: #15133c;"></i>Add to cart</button>
+                                <button class='love-btn btn btn-light-blue px-4 py-1'><i class="fa-solid fa-heart me-2" style="color: #f1eee9;"></i>Add to wishlist</button>
                             </div>
                         </div>
                     </div>`;
