@@ -186,3 +186,20 @@
 .book-recommendations{
     background-color: #F1EEE9;
 }
+
+@media (max-width: 1024px) {
+    #weather-outer-container{
+        margin: 16px;
+    }
+    .book-cover img{
+        height: 300px;
+    }
+}
+@media (max-width: 768px) {
+    #weather-outer-container{
+        margin: 16px;
+    }
+    .book-cover img{
+        height: 200px;
+    }
+}

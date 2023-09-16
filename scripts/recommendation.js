@@ -105,7 +105,7 @@ $(function() {
         $(".book-author").text("Book Author: " + bookInfo.author);
         $(".book-rental").text("Rental : RM" + bookInfo.rental);
         $(".book-deposit").text("Deposit : RM" + bookInfo.deposit);
-        $(".book-cover").html(`<img width=245px height=350px src="${bookInfo.image}" alt="No Book Cover">`);
+        $(".book-cover").html(`<img height=350px src="${bookInfo.image}" alt="No Book Cover">`);
         $(".btn-container").html(`
             <img src="../images/icon/cart_black.png" alt="cart" class="cart-btn pr-4 btn">
             <img src="../images/icon/love_black.png" alt="love" class="btn love-btn">
