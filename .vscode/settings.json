@@ -1,3 +1,5 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "appService.defaultWebAppToDeploy": "/subscriptions/5155d183-dc1e-4c3c-9ba7-03b884f5bf2b/resourceGroups/UCCD2323/providers/Microsoft.Web/sites/letsbook",
+    "appService.deploySubpath": "."
 }
