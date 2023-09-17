@@ -136,9 +136,9 @@ $(function() {
             const bookExists = currentUser.cart.some((cartBook) => cartBook.title === book.title);
     
             if(bookExists) {
-                alert("This book is already in your wishlist!");
+                alert("This book is already in your cart!");
             } else {
-                alert(`${book.title} successfully added to your wishlist!`);
+                alert(`${book.title} successfully added to your cart!`);
                 currentUser.cart.push(book);
                 localStorage.setItem(currentUser.username, JSON.stringify(currentUser));
             }
