@@ -72,6 +72,22 @@ function handleSaveAddressCheckbox() {
   
       // Store the payment information in session storage
       sessionStorage.setItem("currentUser.payment", JSON.stringify(paymentInfo));
+
+      // store the billing address in session storage
+      if (!currentUser.address) {
+        currentUser.address = {};
+      }
+
+      currentUser.address.firstName =$("#Fname").val();
+      currentUser.address.lastName =$("#Lname").val();
+      currentUser.address.addressLine1 =$("#Address1").val();
+      currentUser.address.addressLine2 =$("#Address2").val();
+      currentUser.address.city = $("#City").val();
+      currentUser.address.state = $("#State").val();
+      currentUser.address.postalCode = $("#Zip").val();
+      currentUser.address.phoneNumber = $("#Phone").val();
+      sessionStorage.setItem(currentUser.username + ".address", JSON.stringify(currentUser.address));
+  
   
       // Inform the user that the payment information has been saved
       alert("Payment information has been saved.");
