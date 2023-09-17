@@ -49,7 +49,7 @@ $(function () {
         $('.popup').submit(function(e) {
             e.preventDefault();
             currentUser.address.firstName = $('input[name=\'firstName\']').val();
-            currentUser.address.lastName = $('input[name=\'Last\']').val();
+            currentUser.address.lastName = $('input[name=\'lastName\']').val();
             currentUser.address.addressLine1 = $('input[name=\'addressLine1\']').val();
             currentUser.address.addressLine2 = $('input[name=\'addressLine2\']').val();
             currentUser.address.city= $('input[name=\'city\']').val();
