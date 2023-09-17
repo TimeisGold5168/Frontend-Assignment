@@ -71,16 +71,6 @@ $(function() {
                 weatherDetails.addClass('fadeIn');
                 container.css('height', '590px');     
             },
-            error: function () {
-                $('.container').css('height', '400px');
-                $('.weather-box').hide();
-                $('.weather-details').hide();
-                $('.not-found').show();
-                $('.not-found').addClass('fadeIn');
-                return;
-            }
-            
-
         });
     });
     const displayGenre = genre=> {
