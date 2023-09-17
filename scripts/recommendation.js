@@ -69,7 +69,7 @@ $(function() {
                 weatherDetails.show();
                 weatherBox.addClass('fadeIn');
                 weatherDetails.addClass('fadeIn');
-                container.css('height', '590px');     
+                container.css('height', '620px');     
             },
         });
     });
